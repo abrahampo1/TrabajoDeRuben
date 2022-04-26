@@ -1,0 +1,20 @@
+<div class="center">
+    <h1>Opina de nosotros</h1>
+    <form onsubmit="enviar_formulario(this); ()=>{return false}">
+        <label for="nombre">Nombre</label>
+        <br>
+        <input type="text" class="nombre" name="nombre" placeholder="Nombre de contacto" id="">
+        <br>
+        <label for="comentario">Escribe tu opinión</label>
+        <br>
+        <textarea name="comentario" id="" cols="30" rows="10"></textarea>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+
+<script>
+    function enviar_formulario(form) {
+        alert('Bueno, ' + $(form).find('.nombre').val() + ' acabo de tirar a la basura tu opinion')
+    }
+</script>

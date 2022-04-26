@@ -1,0 +1,207 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Cabecera de navegación */
+
+nav div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 50px;
+    z-index: 1000;
+}
+
+nav {
+    box-shadow: 0px 3px 10px -5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 3px 10px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 3px 10px -5px rgba(0, 0, 0, 0.75);
+    z-index: 1000;
+}
+
+nav h3 {
+    margin: 0;
+    cursor: pointer;
+}
+
+nav span{
+    cursor: pointer;
+}
+
+
+/* Scroll */
+
+progress::-webkit-progress-bar {
+    background-color: #eeeeee;
+}
+
+progress::-webkit-progress-value {
+    background-color: #04a3d3 !important;
+}
+#scroll{
+    position: fixed;
+    left: 0;
+    border: none;
+    height: 5px;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent;
+    background: blue;
+}
+
+/* Menu Lateral */
+
+.sidebar {
+    position: relative;
+    width: 100%;
+    opacity: 0;
+    background-color: rgb(19, 19, 19);
+    height: calc(100% - 50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s;
+    z-index: 1000;
+}
+
+.sidebar .menu{
+    text-align: center;
+    font-size: 50px;
+}
+
+.sidebar .menu .page{
+    font-weight: 600;
+    transition: all 0.5s;
+    color: rgb(129, 129, 129);
+}
+
+.sidebar .menu .page:hover, .sidebar .menu .page:active{
+    font-size: 60px;
+    cursor: pointer;
+    color: whitesmoke;
+}
+
+.sidebar.expanded{
+    display: flex;
+    opacity: 1;
+
+}
+
+
+/* Holder de paginas html */
+
+#app{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Modificador de enlaces (para que se vean bonitos) */
+
+a.page{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modificador de imagenes (para que se vean bonitas) */
+
+img{
+    border-radius: 20px;
+}
+
+/* Text Aligns */
+
+.center{
+    text-align: center;
+}
+
+/* Modificamos el tamaño de texto por defecto */
+
+p{
+    font-size: 20px;
+}
+
+/* Tags */
+
+.tags{
+    display: flex;
+    justify-content: center;
+}
+
+.tags p{
+    margin: 10px;
+    background-color: gray;
+    color: whitesmoke;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* Articulos */
+
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.list .article{
+    width: 200px;
+    height: auto;
+    border-radius: 20px;
+    margin: 20px;
+    text-align: center;
+    background-color: aliceblue;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.list .article:hover{
+    transform: scale(1.2);
+}
+
+.article img{
+    width: 100%;
+}
+
+/* inputs y formularios bonitos */
+
+form input{
+    border: none;
+    border-bottom: 2px solid gray;
+    font-size: 30px;
+    transition: border-bottom 0.3s;
+}
+
+form input:focus{
+    outline: none;
+    border-bottom: 2px solid blue;
+}
+
+form textarea{
+    border-radius: 10px;
+    padding: 10px;
+    width: 50%;
+}
+
+form button{
+    font-size: 30px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
