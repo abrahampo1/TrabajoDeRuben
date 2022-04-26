@@ -58,7 +58,7 @@ function toggle_sidebar() {
 //Esta funcion se encarga de leer el json y cargar los articulos
 
 function load_articles(holder) {
-  $.getJSON('/articulos.json', function (data) {
+  $.getJSON('articulos.json', function (data) {
     data.forEach((article) => {
       $(holder).append(`
             <div class="article" onclick="load_article('${article.html}')">
