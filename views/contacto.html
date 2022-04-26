@@ -7,7 +7,7 @@
         <br>
         <label for="comentario">Escribe tu opinión</label>
         <br>
-        <textarea name="comentario" id="" cols="30" rows="10"></textarea>
+        <textarea name="comentario" class="opinion" id="" cols="30" rows="10"></textarea>
         <br>
         <button type="submit">Enviar</button>
     </form>
@@ -15,6 +15,15 @@
 
 <script>
     function enviar_formulario(form) {
-        alert('Bueno, ' + $(form).find('.nombre').val() + ' acabo de tirar a la basura tu opinion')
+        var nombre = $(form).find('.nombre').val()
+        var opinion = $(form).find('.opinion').val()
+        $('.center').html(`
+        <div class="center">
+            
+            <h1>${nombre} has enviado el siguiente comentario:</h1>
+            <p>${opinion}</p>
+            </div>
+        
+        `)
     }
 </script>
